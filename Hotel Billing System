@@ -1,0 +1,183 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int quant;
+    int choice;
+    // Quantity of food made today
+    int Qrooms = 0, Qchole = 0, Qparathe = 0, Qnoodles = 0, Qlassi = 0, Qburger = 0;
+    // food items sold
+    int Srooms = 0, Schole = 0, Sparathe = 0, Snoodles = 0, Slassi = 0, Sburger = 0;
+    // Total price of items
+    int Total_rooms = 0, Total_chole = 0, Total_parathe = 0, Total_noodles = 0, Total_lassi = 0, Total_burger = 0;
+
+    cout << "\t\t\tWelcome To Pappe Da Hotel !!" << endl;
+    cout << "\nQuantity Of Items We Have: " << endl;
+    cout << "\nRooms Available: ";
+    cin >> Qrooms;
+    cout << "\nQuantiy Of Chole: ";
+    cin >> Qchole;
+    cout << "\nQuantity Of Parathe: ";
+    cin >> Qparathe;
+    cout << "\nQuantity Of Bature: ";
+    cin >> Qnoodles;
+    cout << "\nQuantity Of Lassi: ";
+    cin >> Qlassi;
+    cout << "\nQuantity Of Gulab Jamun: ";
+    cin >> Qburger;
+
+    m:
+    cout << "\n\nPlease Select The Items From The Menu: " << endl;
+    cout << "\n1) Rooms ";
+    cout << "\n2) Chole";
+    cout << "\n3) Parathe";
+    cout << "\n4) Bature";
+    cout << "\n5) Lassi";
+    cout << "\n6) Gulab Jamun";
+    cout << "\n7) Information Regarding Sales And Collection ";
+    cout << "\n8) Exit";
+
+    cout << "\n\nPlease Enter Your Choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "\n\nEnter The Number Of Rooms You Want: ";
+
+        cin >> quant;
+        if (Qrooms - Srooms >= quant)
+        {
+            Srooms = Srooms + quant;
+            Total_rooms = (Total_rooms + quant * 1200);
+            cout << "\n"
+                 << quant << " Room(s) Have Been Alloted To You!" << endl;
+        }
+        else
+
+            cout << "Only " << Qrooms - Srooms << " Room(s) Remaining In Hotel " << endl;
+        break;
+
+    case 2:
+        cout << "\n\nEnter Chole Quantity: ";
+
+        cin >> quant;
+        if (Qchole - Schole >= quant)
+        {
+            Schole = Schole + quant;
+            Total_chole = (Total_chole + quant * 250);
+            cout << "\n"
+                 << quant << " Chole Is The Order!" << endl;
+        }
+        else
+
+            cout << "Only " << Qchole - Schole << " Chole Remaining In Hotel" << endl;
+        break;
+
+    case 3:
+        cout << "\n\nEnter Parathe Quantity: ";
+
+        cin >> quant;
+        if (Qparathe - Sparathe >= quant)
+        {
+            Sparathe = Sparathe + quant;
+            Total_parathe = (Total_parathe + quant * 60);
+            cout << "\n " << quant << " Parathe Is The Order!" << endl;
+        }
+        else
+
+            cout << "Only " << Qparathe - Sparathe << " Parathe Remaining In Hotel" << endl;
+        break;
+
+    case 4:
+        cout << "\n\nEnter Bature Quantity:";
+
+        cin >> quant;
+        if (Qnoodles - Snoodles >= quant)
+        {
+            Snoodles = Snoodles + quant;
+            Total_noodles = (Total_noodles + quant * 80);
+            cout << "\n"
+                 << quant << " Bature Is The Order!" << endl;
+        }
+        else
+
+            cout << "Only " << Qnoodles - Snoodles << " Bature Remaining In Hotel" << endl;
+        break;
+
+    case 5:
+        cout << "\n\nEnter Lassi Quantity:";
+
+        cin >> quant;
+        if (Qlassi - Slassi >= quant)
+        {
+            Slassi = Slassi + quant;
+            Total_lassi = (Total_lassi + quant * 50);
+            cout << "\n"
+                 << quant << " Glass Lassi Is The Order!" << endl;
+        }
+        else
+
+            cout << "Only " << Qlassi - Slassi << " Glass Lassi Remaining In Hotel" << endl;
+        break;
+
+    case 6:
+        cout << "\n\nEnter Gulab Jamun Quantity:";
+
+        cin >> quant;
+        if (Qburger - Sburger >= quant)
+        {
+            Sburger = Sburger + quant;
+            Total_burger = (Total_burger + quant * 90);
+            cout << "\n"
+                 << quant << " Gulab Jamun Is The Order!" << endl;
+        }
+        else
+
+            cout << "Only " << Qburger - Sburger << " Gulab Jamun Remaining In Hotel" << endl;
+        break;
+
+    case 7:
+        cout << "\nDetails of sales and collection " << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\nNumber Of Rooms We Dad: " << Qrooms;
+        cout << "\n\n  Number Of Rooms We Gave For Rent: " << Srooms;
+        cout << "\n\n Remaining Rooms: " << Qrooms - Srooms;
+        cout << "\n\n Total Rooms Collection For The Day:  " << Total_rooms << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\n Number Of Chole We Had: " << Qrooms;
+        cout << "\n\n Number Of Chole We Sold: " << Srooms;
+        cout << "\n\n Remaining Chole: " << Qchole - Schole;
+        cout << "\n\n Total Rooms Collection For The Day: " << Total_chole << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\n Number Of Parathe We Had: " << Qparathe;
+        cout << "\n\n Number Of Parathe We Sold: " << Sparathe;
+        cout << "\n\n Remaining Parathe: " << Qparathe - Sparathe;
+        cout << "\n\n Total Parathe Collection For The Day: " << Total_parathe << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\n Number Of Bature We Had: " << Qnoodles;
+        cout << "\n\n Number Of Bature We Sold: " << Snoodles;
+        cout << "\n\n Remaining Bature: " << Qnoodles - Snoodles;
+        cout << "\n\n Total Bature Collection For The Day: " << Total_noodles << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\n Number Of Lassi We Had: " << Qlassi;
+        cout << "\n\n Number Of Lassi We Sold: " << Slassi;
+        cout << "\n\n Remaining Lassi: " << Qlassi - Slassi;
+        cout << "\n\n Total Lassi Collection For The Day: " << Total_lassi << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        cout << "\n\n Number Of Gulab Jamun We Had: " << Qburger;
+        cout << "\n\n Number Of Gulab Jamun We Sold: " << Sburger;
+        cout << "\n\n Remaining Gulab Jamun : " << Qburger - Sburger;
+        cout << "\n\n Total Gulab Jamun Collection For The Day: " << Total_burger << endl;
+        cout << "-----------------------------------------------------------" << endl;
+        break;
+    case 8:
+        cout << "\t\t\tThank You For Visiting Pappe Da Hotel !! Hope You Liked Our Service !!" << endl;
+        exit(0);
+
+    default:
+        cout << "\n Please Select ONLY The Number Mentioned Above!!" << endl;
+    }
+    goto m;
+}
